@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopfsache</title>
+    
+    <!-- Lora Schriftart von Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Eigenes CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome für Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sprachauswahl -->
+    <div class="language-selector">
+        <button class="lang-btn active" data-lang="de">DE</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid px-3">
+            <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="#" style="margin-left: 0; padding-left: 0;">
+    <img src="images/Logo_Kopfsache.png" alt="Kopfsache Logo" height="100"></a>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">
+                            <span class="lang-de">Über uns</span>
+                            <span class="lang-en">About us</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">
+                            <span class="lang-de">Blog</span>
+                            <span class="lang-en">Blog</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#insights">
+                            <span class="lang-de">Snackable Insights</span>
+                            <span class="lang-en">Snackable Insights</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#test">
+                            <span class="lang-de">Persönlichkeitstest</span>
+                            <span class="lang-en">personality test</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            <span class="lang-de">Kontakt</span>
+                            <span class="lang-en">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+	<!-- Header / Hero Section -->
+<header id="hero" class="d-flex align-items-center">
+    <div class="container text-center">
+        <h1>
+            <span class="lang-de">Kopfsache</span>
+            <span class="lang-en">Matter of mind</span>
+        </h1>
+        <p class="lead">
+            <span class="lang-de">Psychologie für jeden Tag. </span>
+            <span class="lang-en">Psychology for every day. </span>
+        </p>
+        <a href="#about" class="btn btn-primary btn-lg mt-3">
+            <span class="lang-de">Mehr erfahren</span>
+            <span class="lang-en">Learn more</span>
+        </a>
+    </div>
+</header>
+	
+	
+<!-- Über uns Section -->
+<section id="about" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">
+            <span class="lang-de">Über uns</span>
+            <span class="lang-en">About us</span>
+        </h2>
+        <div class="row align-items-center">
+            <!-- Profilbild -->
+            <div class="col-lg-4 d-flex justify-content-center mb-4 mb-lg-0">
+                <img src="images/Logo_Kopfsache.png" alt="Titelbild_Kopfsache" class="img-fluid" style="max-width: 250px; height: auto; border-radius: 0;">
+            </div>
+
+            <!-- Text -->
+            <div class="col-lg-8">
+                <div class="about-text">
+                    <p class="lang-de">
+                        Kopfsache ist dein Blog für Psychologie im Alltag – wissenschaftlich fundiert, verständlich erklärt und alltagsnah aufbereitet. Wir glauben, dass psychologisches Wissen nicht nur für Fachleute da ist. Deshalb findest du bei uns keine komplizierten Theorien, sondern Inhalte, die direkt im echten Leben ankommen.<br>
+						<br>
+						Von Artikeln über Themen wie Selbstzweifel, Motivation oder Beziehungsdynamiken bis hin zu kurzen, „snackbaren“ Psychologie-Fakten und interaktiven Tests – Kopfsache hilft dir dabei, dich selbst und andere besser zu verstehen. Und mit unserem Persönlichkeitstest bekommst du einen ersten Einblick in deine psychologischen Muster.<br>
+						Kopfsache ist keine Therapie – aber vielleicht ein guter Anfang.
+                    </p>
+                    <p class="lang-en">
+                       Kopfsache is your blog for psychology in everyday life - scientifically sound, comprehensibly explained and presented in an everyday way. We believe that psychological knowledge is not just for experts. That's why you won't find complicated theories here, but content that is directly relevant to real life.<br>
+						From articles on topics such as self-doubt, motivation or relationship dynamics to short, “snackable” psychology facts and interactive tests - Kopfsache helps you to better understand yourself and others. And our personality test will give you an initial insight into your psychological patterns.<br>
+					Kopfsache is not a therapy - but perhaps a good start.
+                    </p>
+            </div> <!-- Ende Textbereich -->
+</section>
+
+
+
+	
+<section id="blog" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">
+      <span class="lang-de">Blog</span>
+      <span class="lang-en">Blog</span>
+    </h2>
+
+    <!-- Filter-Buttons -->
+    <div class="filter-buttons text-center mb-4">
+      <button class="btn filter-btn active" data-filter="all">
+        <span class="lang-de">Alle</span>
+        <span class="lang-en">All</span>
+      </button>
+      <button class="btn filter-btn" data-filter="education">
+        <span class="lang-de">Wissen</span>
+        <span class="lang-en">Knowledge</span>
+      </button>
+      <button class="btn filter-btn" data-filter="work">
+        <span class="lang-de">Selbstfindung</span>
+        <span class="lang-en">Selfcare</span>
+      </button>
+    </div>
+
+    <!-- Blog-Artikel-Grid -->
+    <div class="blog-grid">
+
+	<!-- Artikel 1 -->
+      <article class="blog-article filter-work">
+        <h3>
+          <span class="lang-de">Warum wir prokrastinieren – und wie wir es endlich lassen</span>
+          <span class="lang-en">Why we procrastinate - and how we can finally stop</span>
+        </h3>
+        <p class="blog-date">2025-07-11</p>
+        <p class="lang-de teaser-text">"Morgen fange ich wirklich an" – kennst du das? Prokrastination ist kein Charakterfehler, sondern ein faszinierender Trick deines Gehirns. Entdecke die wahren Ursachen des Aufschiebens und drei wissenschaftlich erprobte Strategien, die tatsächlich funktionieren.</p>
+        <p class="lang-en teaser-text">“Tomorrow I'll really get started” - do you know that? Procrastination is not a character flaw, but a fascinating trick of your brain. Discover the real causes of procrastination and three scientifically proven strategies that actually work.</p>
+        <a href="artikel2.html" class="read-more-btn">
+          <span class="lang-de">Mehr erfahren</span>
+          <span class="lang-en">Learn more</span>
+        </a>
+        <div class="accordion-content">
+          <p class="lang-de">Platzhalter.....</p>
+          <p class="lang-en">Platzhalter....</p>
+        </div>
+      </article>	
+		
+      <!-- Artikel 2 -->
+      <article class="blog-article filter-work">
+        <h3>
+          <span class="lang-de">Das Imposter-Syndrom - Wenn Selbstzweifel deinen Erfolg überschatten</span>
+          <span class="lang-en">Imposter Syndrome - When self-doubt overshadows your success.</span>
+        </h3>
+        <p class="blog-date">2025-07-04</p>
+        <p class="lang-de teaser-text">"Die werden schon merken, dass ich keine Ahnung habe." 70% aller Menschen kennen dieses Gefühl. Warum gerade kompetente Menschen am Impostor-Syndrom leiden und wie du deinem inneren Kritiker endlich Paroli bietest – mit konkreten Strategien aus der Psychologie.</p>
+        <p class="lang-en teaser-text">“They'll realize I have no idea.” 70% of people know this feeling. Why competent people in particular suffer from impostor syndrome and how you can finally stand up to your inner critic - with specific strategies from psychology</p>
+        <a href="artikel1.html" class="read-more-btn">
+          <span class="lang-de">Mehr erfahren</span>
+			<span class="lang-en">Learn more</span> </a>
+        <div class="accordion-content">
+          <p class="lang-de">Platzhalter.....</p>
+          <p class="lang-en">Platzhalter....</p>
+        </div>
+      </article>
+
+		<!-- Artikel 3 -->
+      <article class="blog-article filter-work">
+        <h3>
+          <span class="lang-de">Bindungsstile verstehen - Warum Beziehungen oft scheitern</span> 
+          <span class="lang-en">Understanding attachment styles - Why relationships often fail</span>
+        </h3>
+        <p class="blog-date">2025-06-27</p>
+        <p class="lang-de teaser-text">Warum ziehen sich manche bei Nähe zurück, während andere klammern? Die Antwort liegt oft in der Kindheit. Entdecke die vier Bindungsstile nach Bowlby und wie sie deine Partnerwahl, Konflikte und Eifersucht bis heute prägen – plus praktische Tipps für gesündere Beziehungen.</p>
+        <p class="lang-en teaser-text">Why do some people withdraw from closeness while others cling? The answer often lies in childhood. Discover Bowlby's four attachment styles and how they still shape your choice of partner, conflicts and jealousy today - plus practical tips for healthier relationships.</p>
+        <a href="artikel3.html" class="read-more-btn">
+          <span class="lang-de">Mehr erfahren</span>
+          <span class="lang-en">Learn more</span>
+        </a>
+        <div class="accordion-content">
+          <p class="lang-de">Platzhalter.....</p>
+          <p class="lang-en">Platzhalter....</p>
+        </div>
+      </article>
+
+		<!-- Artikel 4 -->
+      <article class="blog-article filter-work">
+        <h3>
+          <span class="lang-de">Mental Load - Die unsichtbare Überforderung</span>
+          <span class="lang-en">Mental Load - The invisible overload</span>
+        </h3>
+        <p class="blog-date">2025-06-20</p>
+        <p class="lang-de teaser-text">"Schatz, sag mir einfach, was ich tun soll!" Dieser Satz bringt viele zum Kochen. Mental Load ist die unsichtbare Arbeit im Kopf – das ständige Dran-Denken und Organisieren. Warum es oft Frauen trifft und wie ihr eine fairere Verteilung in eurer Beziehung schafft.</p>
+        <p class="lang-en teaser-text">“Honey, just tell me what to do!” This sentence brings many people to the boil. Mental load is the invisible work in your head - the constant thinking and organizing. Why it often affects women and how you can create a fairer distribution in your relationship.</p>
+        <a href="artikel4.html" class="read-more-btn">
+          <span class="lang-de">Mehr erfahren</span>
+          <span class="lang-en">Learn more</span>
+        </a>
+        <div class="accordion-content">
+          <p class="lang-de">Platzhalter.....</p>
+          <p class="lang-en">Platzhalter....</p>
+        </div>
+      </article>
+		
+		<!-- Artikel 5-->
+      <article class="blog-article filter-work">
+        <h3>
+          <span class="lang-de">Doomscrolling & Dauerstress - Die Psyche im Digitalzeitalter</span>
+          <span class="lang-en">Doomscrolling & constant stress - The psyche in the digital age</span>
+        </h3>
+        <p class="blog-date">2025-06-13</p>
+        <p class="lang-de teaser-text">3 Uhr nachts, du scrollst immer noch durch schlechte Nachrichten. Dein Gehirn kann nicht zwischen Säbelzahntiger und Katastrophen-Tweet unterscheiden. Wie Social Media unser Steinzeit-Gehirn austrickst und welche digitalen Selbstregulations-Strategien wirklich helfen.</p>
+        <p class="lang-en teaser-text">3 a.m., you're still scrolling through bad news. Your brain can't tell the difference between a sabre-toothed tiger and a catastrophic tweet. How social media tricks our Stone Age brain and which digital self-regulation strategies really help.</p>
+        <a href="artikel5.html" class="read-more-btn">
+          <span class="lang-de">Mehr erfahren</span>
+          <span class="lang-en">Learn more</span>
+        </a>
+        <div class="accordion-content">
+          <p class="lang-de">Platzhalter.....</p>
+          <p class="lang-en">Platzhalter....</p>
+        </div>
+      </article>
+		
+		<!-- Artikel 6 -->
+      <article class="blog-article filter-work">
+        <h3>
+          <span class="lang-de">Resilienz - Psychische Stärke lernen</span>
+          <span class="lang-en">Resilience - learning mental strength</span>
+        </h3>
+        <p class="blog-date">2025-06-06</p>
+        <p class="lang-de teaser-text">Manche Menschen stehen nach jedem Schicksalsschlag wieder auf wie Tischtennisbälle. Andere zerbrechen bei kleineren Rückschlägen. Der Unterschied? Resilienz – dein psychologisches Immunsystem. Entdecke das Resilienz-Trapez und konkrete Übungen für mehr innere Stärke.</p>
+        <p class="lang-en teaser-text">Some people get up again like ping-pong balls after every stroke of fate. Others break after minor setbacks. The difference? Resilience - your psychological immune system. Discover the resilience trapezoid and specific exercises for more inner strength.</p>
+        <a href="artikel6.html" class="read-more-btn">
+          <span class="lang-de">Mehr erfahren</span>
+          <span class="lang-en">Learn more</span>
+        </a>
+        <div class="accordion-content">
+          <p class="lang-de">Platzhalter.....</p>
+          <p class="lang-en">Platzhalter....</p>
+        </div>
+      </article>
+	
+		<!-- Artikel 7 -->
+      <article class="blog-article filter-work">
+        <h3>
+          <span class="lang-de">Schlaf-Hacks - Warum dein Gehirn nachts zur Höchstform aufläuft</span>
+          <span class="lang-en">Sleep hacks - Why your brain is on top form at night</span>
+        </h3>
+        <p class="blog-date">2025-05-30</p>
+        <p class="lang-de teaser-text">Während du schläfst, räumt dein Gehirn auf, repariert sich und löst sogar Probleme. Einstein fand die Relativitätstheorie im Traum. Erfahre, was in deinem Kopf nachts wirklich passiert und entdecke wissenschaftlich belegte Schlaf-Hacks für bessere Erholung und mehr Kreativität.</p>
+        <p class="lang-en teaser-text">While you sleep, your brain tidies up, repairs itself and even solves problems. Einstein discovered the theory of relativity in dreams. Find out what really happens in your head at night and discover scientifically proven sleep hacks for better rest and more creativity.</p>
+        <a href="artikel7.html" class="read-more-btn">
+          <span class="lang-de">Mehr erfahren</span>
+          <span class="lang-en">Learn more</span>
+        </a>
+        <div class="accordion-content">
+          <p class="lang-de">Platzhalter.....</p>
+          <p class="lang-en">Platzhalter....</p>
+        </div>
+      </article>
+		
+	<!-- Artikel 8 -->
+      <article class="blog-article filter-work">
+        <h3>
+          <span class="lang-de">Mikrogewohnheiten - Wie winzige Veränderungen dein Leben revolutionieren</span>
+          <span class="lang-en">Microhabits - How tiny changes can revolutionize your life</span>
+        </h3>
+        <p class="blog-date">2025-05-23</p>
+        <p class="lang-de teaser-text">"Ich will mein Leben komplett ändern!" Drei Wochen später: zurück bei alten Gewohnheiten. Vergiss radikale Transformationen. Die Magie liegt in der 1%-Regel: Statt 100% besser, werde jeden Tag 1% besser. Wie winzige Mikrogewohnheiten große Veränderungen bewirken.</p>
+        <p class="lang-en teaser-text">“I want to change my life completely!” Three weeks later: back to old habits. Forget radical transformations. The magic lies in the 1% rule: instead of 100% better, get 1% better every day. How tiny micro-habits bring about big changes.</p>
+        <a href="artikel8.html" class="read-more-btn">
+          <span class="lang-de">Mehr erfahren</span>
+          <span class="lang-en">Learn more</span>
+        </a>
+        <div class="accordion-content">
+          <p class="lang-de">Platzhalter.....</p>
+          <p class="lang-en">Platzhalter....</p>
+        </div>
+      </article>
+		
+	<!-- Weitere Artikel nach gleichem Muster hier ... -->
+
+    </div>
+  </div>
+</section>	
+	
+<!-- Slideshow Teaser -->
+	
+<section id="insights" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">
+      <span class="lang-de">Snackable Insights</span>
+      <span class="lang-en">Snackable Insights</span>
+    </h2>
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- Slider -->
+    <div class="swiper slideshow">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <img class="slide-image" src="images/Snackable Insights/2.png" alt="Dunning-Kruger-Effekt" />
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <img class="slide-image" src="images/Snackable Insights/3.png" alt="Dunning-Kruger-Effekt" />
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <img class="slide-image" src="images/Snackable Insights/4.png" alt="Dunning-Kruger-Effekt" />
+          <button class="share-button" onclick="shareFact(3)">Teilen</button>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+
+    <!-- Zähler -->
+    <div id="slide-counter" class="slide-counter">1 / 3</div>
+
+    <!-- Mehr-Fakten-Button -->
+    <div class="intro">
+      <a href="snackable insights.html" class="more-facts-button">Noch mehr Fakten?</a>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Dein eigenes JS -->
+    <script>
+      const swiper = new Swiper('.swiper.slideshow', {
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        loop: false, // WICHTIG: Für 3 Slides kein Loop!
+        on: {
+          init: function () {
+            updateCounter(this);
+          },
+          slideChange: function () {
+            updateCounter(this);
+          },
+        },
+      });
+
+      function updateCounter(swiperInstance) {
+        const current = swiperInstance.activeIndex + 1;
+        const total = swiperInstance.slides.length;
+        document.getElementById('slide-counter').textContent = `${current} / ${total}`;
+      }
+
+      function shareFact(n) {
+        alert("Fakt " + n + " wurde geteilt!");
+      }
+    </script>
+  </div>
+</section>
+
+
+</section>
+
+<!-- Persönlichkeitstest -->
+<section id="test" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">
+      <span class="lang-de">Persönlichkeitstest</span>
+      <span class="lang-en">Personality test</span>
+    </h2> 
+<div class="container">
+	<h3><span class="lang-de"> Kennst du dich selbst am Besten?</span></h3>
+	<h3><span class="lang-en"> Do you know yourself best?</span></h3>
+  
+    <div class="question-card">
+      <p class="question"><span class="lang-de">Willst du mehr über dich selbst erfahren?</p>
+	  <p class="question"><span class="lang-en">Want to find out more about yourself?</p>
+      <div class="answers">
+        <a href="persönlichkeitstest.html" class="btn btn-primary btn-lg mt-3">
+            <span class="lang-de">Ja</span>
+            <span class="lang-en">Yes</span>
+        </a>
+		  <a href="persönlichkeitstest.html" class="btn btn-primary btn-lg mt-3">
+            <span class="lang-de">Klaro</span>
+            <span class="lang-en">Absolutely</span>
+        </a>
+		</div> 
+	<p class="intro mt-4"><a href="persönlichkeitstest.html"><span class="lang-de"> Mach den Persönlichkeitstest – kostenlos, anonym & wissenschaftlich fundiert.</span></a></p>
+		<p class="intro mt-4"><a href="persönlichkeitstest.html"><span class="lang-en"> Take the personality test - free, anonymous & scientifically sound.</span></a></p>
+  </div>
+	  </div> 
+</section>
+	
+
+    <!-- Kontakt -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">
+                <span class="lang-de">Kontakt</span>
+                <span class="lang-en">Contact</span>
+            </h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-info mb-5">
+                        <div class="row">
+                            <div class="col-md-4 text-center mb-4">
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt fa-2x mb-3" style="color: var(--primary-color);"></i>
+                                    <h5>
+                                        <span class="lang-de">Adresse</span>
+                                        <span class="lang-en">Address</span>
+                                    </h5>
+                                    <p>Würzburg, Deutschland</p>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 text-center mb-4">
+                                <div class="contact-item">
+                                    <i class="fas fa-envelope fa-2x mb-3" style="color: var(--primary-color);"></i>
+                                    <h5>Email</h5>
+                                    <p>info@kopfsache.de</p>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4 text-center mb-4">
+                                <div class="contact-item">
+                                    <i class="fas fa-phone fa-2x mb-3" style="color: var(--primary-color);"></i>
+                                    <h5>
+                                        <span class="lang-de">Telefon</span>
+                                        <span class="lang-en">Phone</span>
+                                    </h5>
+                                    <p>+49 1234567890</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <input type="text" class="form-control" id="name" placeholder="Name" required>
+                                </div>
+                                
+                                <div class="col-md-6 mb-3">
+                                    <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="subject" placeholder="Betreff / Subject" required>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <textarea class="form-control" id="message" rows="5" placeholder="Nachricht / Message" required></textarea>
+                            </div>
+                            
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <span class="lang-de">Nachricht senden</span>
+                                    <span class="lang-en">Send Message</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="py-4">
+    <div class="container text-center">
+        <div class="social-links mb-4">
+            <a href="https://www.linkedin.com/in/chantal-meidel-006612226" class="social-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+			</a> 
+            <a href="https://www.instagram.com/talli_27/" class="social-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <p class="copyright">
+            &copy; 2025 
+            <span class="lang-de">Kopfsache - Psychologie für jeden Tag.</span>
+            <span class="lang-en">Matter of mind - Psychologie für jeden Tag</span>
+        </p>
+    </div>
+</footer>
+
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+ 

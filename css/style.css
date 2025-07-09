@@ -1,0 +1,924 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Hauptfarben */
+:root {
+    --primary-color: #010a4f; /* Navy-Blau */
+    --secondary-color: ##a89ce3; /* Lila */
+    --text-color: #333; /* Dunkles Grau */
+    --light-text: #777; /* Hellgrau */
+    --white: #fff; /* Weiß */
+    --dark: #222; /* Sehr dunkles Grau */
+}
+
+/* Grundlegendes Layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Verhindert Layout-Probleme durch Padding und Border */
+}
+
+body {
+    font-family: 'Arimo', sans-serif; /* Schriftart von Lora zu Arimo geändert */
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--secondary-color); /* Hintergrundfarbe auf Hellgrau */
+}
+
+/* Sprachauswahl */
+.language-selector {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 1100;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.lang-btn {
+    border: none;
+    background: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.lang-btn.active {
+    background-color: #a89ce3;
+    color: var(--white);
+}
+
+/* Navigation */
+.navbar {
+    background-color: transparent;
+    transition: all 0.3s ease;
+    padding: 20px 0;
+    position: relative;
+}
+
+.navbar-nav {
+    margin-right: 50px; /* Etwas Platz für die Sprachauswahl */
+}
+
+
+/* Navigation */
+.navbar {
+    background-color: transparent;
+    transition: all 0.3s ease;
+    padding: 0px 0;
+    position: relative;
+}
+
+.navbar.scrolled {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-link {
+    color: var(--text-color);
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* Hero-Bereich */
+#hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/Header_Kopfsache.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+}
+
+#hero3 {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/header_persoenlichkeitstest.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+}
+
+#hero4 {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/header_insights.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+}
+
+
+#heroartikel1 {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/header_imposter.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+}
+
+#heroartikel2 {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/header_prokrastination.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+}
+
+#heroartikel3 {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/titelbild_bindungsstile.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+}
+
+#heroartikel4 {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/titelbild_mentalload.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+}
+
+#heroartikel5 {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/titelbild_doomscrolling.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+}
+
+#heroartikel6 {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/titelbild_resilienz.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+}
+
+#heroartikel7 {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/titelbild_schlaf.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+}
+
+#heroartikel8 {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/titelbild_mikrogewohnheiten.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+#hero .lead {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+#hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #a89ce3; /* Lila */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Akkordeon für Timeline */
+.accordion {
+    background-color: transparent;
+    color: var(--primary-color);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    padding: 10px 0;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    transition: color 0.3s ease;
+}
+
+.accordion:hover {
+    color: #a89ce3; /*lila beim Hover */
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding-left: 10px;
+    margin-top: 10px;
+    color: var(--light-text);
+}
+
+
+
+/* Über uns */
+.profile-image img {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border: 5px solid var(--white);
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.personal-info {
+    font-size: 1rem;
+}
+
+.personal-info strong {
+    color: var(--dark);
+    margin-right: 5px;
+}
+
+.personal-info span {
+    color: var(--light-text);
+}
+
+/* Überschriften */
+h2 {
+    font-weight: 700;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+	text-align: center
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+/* Erfahrung */
+.filter-buttons {
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    margin: 0 5px;
+    border-radius: 20px;
+    padding: 8px 20px;
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.read-more-btn {
+  display: inline-block;
+  background-color: #a89ce3;     /* Dein Lila */
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.read-more-btn:hover {
+  background-color: #9182cb; /* dunkler beim Hover */
+  text-decoration: none;
+}
+
+.read-more-btn:visited,
+.read-more-btn:focus,
+.read-more-btn:active {
+  color: white;
+  text-decoration: none;
+  background-color: #a89ce3;
+}
+
+.read-more-btn span {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+</* Basis-Reset */
+* {
+  box-sizing: border-box;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+h2, h3 {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Filter Buttons */
+.filter-buttons {
+  margin-bottom: 1.5rem;
+}
+.filter-btn {
+  cursor: pointer;
+  background-color: #eee;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.3rem;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+.filter-btn:hover {
+  background-color: #ccc;
+}
+.filter-btn.active {
+  background-color: #010a4f;
+  color: white;
+}
+
+/* Grid für Blogartikel */
+.blog-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Einzelner Artikel Card */
+.blog-article {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  display: flex;
+  flex-direction: column;
+}
+.blog-article h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+.blog-date {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+}
+.teaser-text {
+  flex-grow: 1;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* Accordion Button */
+.accordion {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: #010a4f;
+  font-weight: 600;
+  padding: 0;
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+}
+.accordion:hover {
+  text-decoration: underline;
+}
+
+/* Accordion Content */
+.accordion-content {
+  display: none;
+  color: #444;
+  margin-top: 0.5rem;
+}
+.accordion-content p {
+  margin: 0.5rem 0;
+}
+
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: auto;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  background-color: #a89ce3; /* Lila */
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+.read-more-btn:hover {
+  background-color: #8e7fd0; /* dunkleres Lila beim Hover */
+}
+
+.slide-counter {
+  text-align: center;
+  margin-top: 16px;
+  font-weight: bold;
+  color: #555;
+}
+
+.swiper.slideshow {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+.slide-image {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Neu: Macht das Bild quadratisch */
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+.fact-text {
+  margin-top: 16px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.share-button {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background-color: #8e7fd0;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: #8e7fd0;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    gap: 10px;
+	box-shadow: none; 
+	background-color: #a89ce3; 
+}
+
+.radio-option:hover {
+    background-color: #f0f0f0;
+}
+
+.radio-option input[type="radio"] {
+    accent-color: #a89ce3;
+    transform: scale(1.3);
+    margin-right: 10px;
+}
+
+.btn {
+  background-color: #8e7fd0; /* Satter Lila-Ton */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #8e7fd0;
+}
+
+.more-facts-button {
+  display: inline-block;
+  background-color: #8e7fd0 !important; /* erzwingt lila Hintergrund */
+  color: white !important;              /* erzwingt weiße Schrift */
+  padding: 12px 24px;
+  text-decoration: none !important;     /* kein Unterstrich */
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Ergebnis-Stil */
+.result-card {
+  border-left: 8px solid #8e7fd0; /* Standardfarbe – wird dynamisch ersetzt */
+  padding: 24px;
+  border-radius: 16px;
+  background-color: #f9fafb;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-top: 32px;
+}
+
+.result-type {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.result-subtitle {
+  font-size: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.result-description {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.traits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.trait-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease;
+}
+
+.trait-card:hover {
+  transform: translateY(-3px);
+}
+
+.trait-card h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #8e7fd0;
+}
+
+.trait-card p {
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+/* Restart-Button */
+#result button {
+  margin-top: 20px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  background-color: #8e7fd0;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#result button:hover {
+  background-color: #8e7fd0;
+}
+
+.hidden {
+  display: none;
+}
+
+.answer-btn {
+  cursor: pointer;
+  padding: 12px 15px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  user-select: none;
+  background-color: #8e7fd0;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.answer-btn:hover {
+  background-color: #e7e0f7;
+  border-color: #8e7fd0;
+}
+
+.answer-btn.selected {
+  background-color: #8e7fd0; /* helles Lila */
+  border-color: #8e7fd0;
+}
+
+
+/* Fähigkeiten */
+.skill-item {
+    margin-bottom: 25px;
+}
+
+.skill-item h5 {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 10px;
+    background-color: #e6e6e6;
+	margin-top: 1.5rem; /* oder z. B. 24px */
+	display: block; 
+}
+
+.progress-bar {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+.personality-preview {
+  background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+  padding: 3rem 1rem;
+  font-family: system-ui, sans-serif;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.intro {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.intro a {
+  text-decoration: none;            /* Kein Unterstrich */
+  color: #a89ce3;                   /* Lila Farbe */
+  background-color: transparent;   /* Kein blauer Hintergrund */
+}
+
+.intro a:hover {
+  text-decoration: underline;      /* Optional: Unterstrich bei Hover */
+  color: #917cd5;                  /* Optional: etwas dunkler bei Hover */
+}
+
+
+.question-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+}
+
+.question {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.answer-btn {
+  background: #4a6df0;
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.answer-btn:hover {
+  background: #3b5dd0;
+}
+
+.progress {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Kontakt */
+.contact-item i {
+    color: var(--primary-color);
+}
+
+.contact-item h5 {
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.form-control {
+    padding: 12px 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #e6e6e6;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-link {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+.copyright {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: var(--white);
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 10px;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero .lead {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .timeline::before {
+        left: 40px;
+    }
+
+    .timeline-content {
+        width: calc(100% - 40px);
+        margin-left: 0;
+    }
+
+    .profile-image img {
+        width: 100%;
+    }
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 200px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flip-card-front {
+  font-weight: 600;
+}
+
+.flip-card-back {
+  background-color: #f8f9fa;
+  color: #333;
+  transform: rotateY(180deg);
+  font-size: 0.95rem;
+}
+
+.flip-card-front {
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.flip-card:hover .flip-card-front {
+  background-color: var(--primary-color); /* dein definierter Rotton */
+  color: #fff;
+}
+
+.flip-card:hover .flip-card-front i {
+  color: #fff;
+}
+

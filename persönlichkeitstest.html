@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopfsache - Persönlichkeitstest</title>
+    
+    <!-- Lora Schriftart von Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Eigenes CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome für Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Sprachauswahl -->
+    <div class="language-selector">
+        <button class="lang-btn active" data-lang="de">DE</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid px-3">
+            <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="#" style="margin-left: 0; padding-left: 0;">
+    <img src="images/Logo_Kopfsache.png" alt="Kopfsache Logo" height="100"> </a>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <span class="lang-de">Über uns</span>
+                            <span class="lang-en">About us</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <span class="lang-de">Blog</span>
+                            <span class="lang-en">Blog</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="snackable insights.html">
+                            <span class="lang-de">Snackable Insights</span>
+                            <span class="lang-en">Snackable Insights</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="persönlichkeitstest.html">
+                            <span class="lang-de">Persönlichkeitstest</span>
+                            <span class="lang-en">personality test</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <span class="lang-de">Kontakt</span>
+                            <span class="lang-en">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	
+	<!-- Header / Hero Section -->
+<header id="hero3" class="d-flex align-items-center">
+    <div class="container text-center">
+        <h1>
+            <span class="lang-de">Persönlichkeitstest</span>
+            <span class="lang-en"></span>
+        </h1><br>
+    </div>
+</header>
+	
+
+<!-- Testinhalt -->
+  <div class="container article-content">
+  <div class="container">
+    <div class="header">
+      <h1>Persönlichkeitstest</h1>
+      <p>Entdecke deinen einzigartigen Persönlichkeitstyp</p>
+    </div>
+
+    <div class="content">
+      <!-- Start Screen -->
+      <div id="startScreen" class="start-screen">
+        <h2>Willkommen zum Persönlichkeitstest</h2>
+        <p>
+          Dieser Test hilft dir dabei, deinen dominanten Persönlichkeitstyp zu identifizieren. Diese werden in eine von vier Kategorien eingeordnet:
+          <strong>Dominant</strong>, <strong>Initiativ</strong>, <strong>Stetig</strong> oder <strong>Gewissenhaft</strong>.
+        </p>
+        <p>Der Test dauert etwa 5–10 Minuten. Antworte spontan und ehrlich – es gibt keine richtigen oder falschen Antworten.</p>
+        <button class="btn" onclick="startTest()">Test starten</button>
+      </div>
+
+      <!-- Question Screen -->
+      <div id="questionScreen" class="question-screen hidden">
+        <div class="progress-bar">
+          <div class="progress" id="progressBar" style="width: 0%;"></div>
+        </div>
+        <div class="progress-text" id="progressText">Frage 1 von 20</div>
+
+        <div class="question-container">
+          <div class="question" id="questionText"></div>
+          <div class="options" id="optionsContainer"></div>
+          <button class="btn" id="nextButton" onclick="nextQuestion()" style="display: none;">Nächste Frage</button>
+        </div>
+      </div>
+
+      <!-- Result Screen -->
+      <div id="result" class="hidden">
+        <div id="resultCard"></div>
+        <button class="btn" onclick="restartTest()" style="margin-top: 30px;">Test wiederholen</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <script>
+const questions = [
+  { question: "Wie gehen Sie mit Konflikten um?",
+    options: [
+      { text: "Ich gehe sie direkt und entschlossen an", type: "dominant" },
+      { text: "Ich versuche eine kreative Lösung zu finden", type: "initiativ" },
+      { text: "Ich suche nach Kompromissen und Harmonie", type: "stetig" },
+      { text: "Ich analysiere alle Aspekte gründlich", type: "gewissenhaft" }
+    ]
+  },
+  { question: "Wie organisieren Sie Ihre Arbeit?",
+    options: [
+      { text: "Ich übernehme gern die Führung und treffe Entscheidungen", type: "dominant" },
+      { text: "Ich arbeite gerne im Team und motiviere andere", type: "initiativ" },
+      { text: "Ich bevorzuge klare Strukturen und Stabilität", type: "stetig" },
+      { text: "Ich plane alles sehr genau und nach Regeln", type: "gewissenhaft" }
+    ]
+  },
+  { question: "Wie gehen Sie mit neuen Herausforderungen um?",
+    options: [
+      { text: "Ich packe sie energisch an und setze sie schnell um", type: "dominant" },
+      { text: "Ich sehe sie als Chance für Kreativität und Austausch", type: "initiativ" },
+      { text: "Ich gehe sie vorsichtig und bedacht an", type: "stetig" },
+      { text: "Ich analysiere sie gründlich, bevor ich handle", type: "gewissenhaft" }
+    ]
+  },
+  { question: "Wie reagieren Sie, wenn Sie unter Druck stehen?",
+    options: [
+      { text: "Ich konzentriere mich und handle entschlossen", type: "dominant" },
+      { text: "Ich suche den Austausch mit anderen, um Lösungen zu finden", type: "initiativ" },
+      { text: "Ich bleibe ruhig und unterstütze das Team", type: "stetig" },
+      { text: "Ich arbeite methodisch weiter und achte auf Details", type: "gewissenhaft" }
+    ]
+  },
+  { question: "Welche Rolle übernehmen Sie meist im Team?",
+    options: [
+      { text: "Der Anführer, der Entscheidungen trifft", type: "dominant" },
+      { text: "Der Ideengeber und Motivator", type: "initiativ" },
+      { text: "Der Unterstützer und Vermittler", type: "stetig" },
+      { text: "Der Planer und Qualitätssicherer", type: "gewissenhaft" }
+    ]
+  },
+  { question: "Wie gehen Sie mit Kritik um?",
+    options: [
+      { text: "Ich nehme sie als Herausforderung an", type: "dominant" },
+      { text: "Ich sehe sie als Chance für Wachstum", type: "initiativ" },
+      { text: "Ich nehme sie ernst und versuche Harmonie zu bewahren", type: "stetig" },
+      { text: "Ich analysiere sie genau und arbeite an Verbesserungen", type: "gewissenhaft" }
+    ]
+  },
+  { question: "Wie wichtig ist Ihnen Planung?",
+    options: [
+      { text: "Ich plane zielorientiert, aber flexibel", type: "dominant" },
+      { text: "Ich plane spontan und improvisiere gerne", type: "initiativ" },
+      { text: "Ich plane zuverlässig und vorhersagbar", type: "stetig" },
+      { text: "Ich plane sehr detailliert und systematisch", type: "gewissenhaft" }
+    ]
+  },
+  { question: "Wie beschreiben andere Sie meist?",
+    options: [
+      { text: "Durchsetzungsstark und direkt", type: "dominant" },
+      { text: "Lebhaft und kommunikativ", type: "initiativ" },
+      { text: "Zuverlässig und geduldig", type: "stetig" },
+      { text: "Sorgfältig und genau", type: "gewissenhaft" }
+    ]
+  },
+  { question: "Was motiviert Sie am meisten?",
+    options: [
+      { text: "Erfolg und Einfluss", type: "dominant" },
+      { text: "Anerkennung und Spaß", type: "initiativ" },
+      { text: "Stabilität und Harmonie", type: "stetig" },
+      { text: "Qualität und Ordnung", type: "gewissenhaft" }
+    ]
+  },
+  { question: "Wie verhalten Sie sich bei Entscheidungen?",
+    options: [
+      { text: "Ich treffe schnelle Entscheidungen", type: "dominant" },
+      { text: "Ich beziehe viele Meinungen ein", type: "initiativ" },
+      { text: "Ich entscheide bedacht und ruhig", type: "stetig" },
+      { text: "Ich analysiere alle Fakten genau", type: "gewissenhaft" }
+    ]
+  },
+  { question: "Wie gehen Sie mit Fehlern um?",
+    options: [
+      { text: "Ich lerne schnell daraus und mache weiter", type: "dominant" },
+      { text: "Ich bespreche sie offen im Team", type: "initiativ" },
+      { text: "Ich versuche, sie zu vermeiden und behutsam zu handeln", type: "stetig" },
+      { text: "Ich suche nach der Ursache und verbessere Prozesse", type: "gewissenhaft" }
+    ]
+  },
+  { question: "Wie verbringen Sie Ihre Freizeit am liebsten?",
+    options: [
+      { text: "Mit spannenden Aktivitäten und Herausforderungen", type: "dominant" },
+      { text: "Mit Freunden und sozialen Events", type: "initiativ" },
+      { text: "In ruhiger Umgebung und mit Familie", type: "stetig" },
+      { text: "Mit Hobbys, die Präzision und Planung erfordern", type: "gewissenhaft" }
+    ]
+  },
+  { question: "Wie gehen Sie mit Veränderungen um?",
+    options: [
+      { text: "Ich sehe sie als Chance und handle schnell", type: "dominant" },
+      { text: "Ich freue mich auf neue Erfahrungen", type: "initiativ" },
+      { text: "Ich brauche Zeit, mich anzupassen", type: "stetig" },
+      { text: "Ich prüfe alle Details, bevor ich mich anpasse", type: "gewissenhaft" }
+    ]
+  },
+  { question: "Wie wichtig ist Ihnen Teamarbeit?",
+    options: [
+      { text: "Ich übernehme gerne die Führung im Team", type: "dominant" },
+      { text: "Ich liebe es, im Team Ideen zu entwickeln", type: "initiativ" },
+      { text: "Ich unterstütze andere und halte das Team zusammen", type: "stetig" },
+      { text: "Ich achte auf Struktur und Qualität im Team", type: "gewissenhaft" }
+    ]
+  },
+  { question: "Wie gehen Sie mit Stress um?",
+    options: [
+      { text: "Ich bleibe fokussiert und handele zielstrebig", type: "dominant" },
+      { text: "Ich suche Unterstützung und Ablenkung", type: "initiativ" },
+      { text: "Ich versuche Ruhe zu bewahren und Harmonie zu erhalten", type: "stetig" },
+      { text: "Ich strukturiere meine Arbeit, um Stress zu minimieren", type: "gewissenhaft" }
+    ]
+  },
+  { question: "Wie reagieren Sie auf unerwartete Situationen?",
+    options: [
+      { text: "Ich handle sofort und übernehme Kontrolle", type: "dominant" },
+      { text: "Ich bleibe offen und flexibel", type: "initiativ" },
+      { text: "Ich suche Unterstützung und sichere Stabilität", type: "stetig" },
+      { text: "Ich analysiere schnell und suche Lösungen", type: "gewissenhaft" }
+    ]
+  },
+  { question: "Wie kommunizieren Sie am liebsten?",
+    options: [
+      { text: "Direkt und klar", type: "dominant" },
+      { text: "Locker und begeisternd", type: "initiativ" },
+      { text: "Ruhig und einfühlsam", type: "stetig" },
+      { text: "Sachlich und genau", type: "gewissenhaft" }
+    ]
+  },
+  { question: "Wie gehen Sie mit Routineaufgaben um?",
+    options: [
+      { text: "Ich erledige sie schnell und effizient", type: "dominant" },
+      { text: "Ich suche Wege, sie interessanter zu machen", type: "initiativ" },
+      { text: "Ich erledige sie zuverlässig und beständig", type: "stetig" },
+      { text: "Ich achte auf Genauigkeit und Details", type: "gewissenhaft" }
+    ]
+  },
+  { question: "Wie wichtig ist Ihnen persönliche Weiterentwicklung?",
+    options: [
+      { text: "Sehr wichtig – ich will mich ständig verbessern", type: "dominant" },
+      { text: "Wichtig – ich lerne gern durch Austausch", type: "initiativ" },
+      { text: "Wichtig – ich entwickle mich in Ruhe und stetig", type: "stetig" },
+      { text: "Sehr wichtig – ich setze auf gezieltes Lernen", type: "gewissenhaft" }
+    ]
+  },
+  { question: "Wie gehen Sie mit Feedback um?",
+    options: [
+      { text: "Ich nehme es ernst und handle schnell", type: "dominant" },
+      { text: "Ich freue mich über positives Feedback", type: "initiativ" },
+      { text: "Ich nehme es ruhig auf und reflektiere", type: "stetig" },
+      { text: "Ich analysiere es genau und setze es um", type: "gewissenhaft" }
+    ]
+  }
+];
+
+const results = {
+  dominant: {
+    emoji: "👑",
+    title: "Dominant",
+    subtitle: "Durchsetzungsfähig und entscheidungsfreudig",
+    description: "Sie übernehmen gerne Verantwortung und gehen Herausforderungen direkt an.",
+    traits: [
+      { title: "Stärken", content: "Durchsetzungsvermögen, Selbstbewusstsein" },
+      { title: "Schwächen", content: "Ungeduld, kann dominant wirken" },
+      { title: "Motivation", content: "Erfolg, Kontrolle" }
+    ],
+    color: "#E57373"
+  },
+  initiativ: {
+    emoji: "🎉",
+    title: "Initiativ",
+    subtitle: "Kreativ und kommunikativ",
+    description: "Sie begeistern andere und bringen viel Energie ins Team.",
+    traits: [
+      { title: "Stärken", content: "Kommunikationsfähigkeit, Begeisterungsfähigkeit" },
+      { title: "Schwächen", content: "Ungeduld, Detailmangel" },
+      { title: "Motivation", content: "Anerkennung, Spaß" }
+    ],
+    color: "#FFD54F"
+  },
+  stetig: {
+    emoji: "🤝",
+    title: "Stetig",
+    subtitle: "Zuverlässig und harmoniebedürftig",
+    description: "Sie sind einfühlsam und unterstützen andere gerne.",
+    traits: [
+      { title: "Stärken", content: "Teamfähigkeit, Geduld" },
+      { title: "Schwächen", content: "Konfliktscheu, Widerstand gegen Veränderung" },
+      { title: "Motivation", content: "Stabilität, Harmonie" }
+    ],
+    color: "#81C784"
+  },
+  gewissenhaft: {
+    emoji: "📐",
+    title: "Gewissenhaft",
+    subtitle: "Analytisch und sorgfältig",
+    description: "Sie arbeiten genau und legen großen Wert auf Qualität.",
+    traits: [
+      { title: "Stärken", content: "Präzision, Organisation" },
+      { title: "Schwächen", content: "Perfektionismus, Zögerlichkeit" },
+      { title: "Motivation", content: "Qualität, Ordnung" }
+    ],
+    color: "#64B5F6"
+  }
+};
+
+let currentQuestion = 0;
+let scores = {
+  dominant: 0,
+  initiativ: 0,
+  stetig: 0,
+  gewissenhaft: 0
+};
+
+function startTest() {
+  document.getElementById("startScreen").style.display = "none";
+  document.getElementById("result").style.display = "none";
+  document.getElementById("questionScreen").style.display = "block";
+
+  currentQuestion = 0;
+  scores = { dominant: 0, initiativ: 0, stetig: 0, gewissenhaft: 0 };
+  showQuestion();
+}
+
+function showQuestion() {
+  const q = questions[currentQuestion];
+  document.getElementById("questionText").innerText = q.question;
+
+  const optionsContainer = document.getElementById("optionsContainer");
+  optionsContainer.innerHTML = "";
+
+  q.options.forEach((opt, index) => {
+    // Label um input und span
+    const label = document.createElement("label");
+    label.className = "radio-option";
+
+    // Radio Input
+    const input = document.createElement("input");
+    input.type = "radio";
+    input.name = "answer";  // Name gleich für alle Optionen pro Frage
+    input.value = opt.type;
+    input.id = `option${index}`;
+
+    // Span für Text
+    const span = document.createElement("span");
+    span.innerText = opt.text;
+
+    // Klick auf Label wählt input und speichert die Antwort
+    label.appendChild(input);
+    label.appendChild(span);
+
+    // Auswahl-Event
+    input.addEventListener("change", () => {
+      selectAnswer(opt.type);
+    });
+
+    optionsContainer.appendChild(label);
+  });
+
+  updateProgress();
+}
+
+
+function updateProgress() {
+  document.getElementById("progressText").innerText = `Frage ${currentQuestion + 1} von ${questions.length}`;
+  const percent = ((currentQuestion) / questions.length) * 100;
+  document.getElementById("progressBar").style.width = percent + "%";
+}
+
+function selectAnswer(type) {
+  scores[type]++;
+  currentQuestion++;
+  if (currentQuestion < questions.length) {
+    showQuestion();
+  } else {
+    showResult();
+  }
+}
+
+function showResult() {
+  document.getElementById("questionScreen").style.display = "none";
+  document.getElementById("result").style.display = "block";
+
+  const highestType = Object.keys(scores).reduce((a,b) => scores[a] > scores[b] ? a : b);
+  const res = results[highestType];
+
+  document.getElementById("resultCard").innerHTML = `
+    <div class="result-card" style="border-left-color: ${res.color}">
+      <h2>${res.emoji} ${res.title}</h2>
+      <h3>${res.subtitle}</h3>
+      <p>${res.description}</p>
+      <div class="traits-grid">
+        ${res.traits.map(t => `
+          <div class="trait-card">
+            <h4>${t.title}</h4>
+            <p>${t.content}</p>
+          </div>`).join("")}
+      </div>
+    </div>
+  `;
+}
+
+function restartTest() {
+  document.getElementById("result").style.display = "none";
+  document.getElementById("startScreen").style.display = "block";
+  currentQuestion = 0;
+  scores = { dominant: 0, initiativ: 0, stetig: 0, gewissenhaft: 0 };
+}
+</script>
+</body>
+</html>
+   
+<a href="index.html#blog" class="btn btn-back mt-4"><i class="fa fa-arrow-left me-2"></i>Zurück zum Blog</a>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Footer -->
+<footer class="py-4">
+    <div class="container text-center">
+        <div class="social-links mb-4">
+            <a href="https://www.linkedin.com/in/chantal-meidel-006612226" class="social-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+			</a> 
+            <a href="https://www.instagram.com/talli_27/" class="social-link" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <p class="copyright">
+            &copy; 2025 
+            <span class="lang-de">Kopfsache - Psychologie für jeden Tag.</span>
+            <span class="lang-en">Kopfsache</span>
+        </p>
+    </div>
+</footer>
+
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+ 
